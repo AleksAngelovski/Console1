@@ -1,9 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-string userValue = Console.ReadLine();
-if(userValue == "1")
+int[] numbers = new int[5];
+
+for (int i = 0; i < 5; i++)
 {
-    string message = "typed 1 ";
-    Console.WriteLine(message);
-    
+    numbers[i] = i;
+    Console.WriteLine(numbers[i]);
+
 }
