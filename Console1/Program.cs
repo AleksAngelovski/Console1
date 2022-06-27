@@ -1,45 +1,21 @@
 ﻿using System;
+using System.Linq;
+using Console1.MeList;
 
 class MainClass
 {
     static void Main()
     {
-        int[][] partiesJagged = new int[3][];
-        partiesJagged[0] = new int[] { 25, 27, 28, 29 };
-        partiesJagged[1] = new int[] { 25, 27, 28, 66 };
-        partiesJagged[2] = new int[] { 25, 27, 28, 29, 30, 32 };
-        int totalAge = 0;
+        MeList<int> list = new MeList<int>();
+        list.Add(1);
+        list.Add(2);    
+        list.Add(3);
 
-        
-        foreach (int[] thisRow in partiesJagged)
-        {
-            foreach(int i in thisRow)
-            {
-                Console.WriteLine(i);
-                totalAge++;
-            }
-        }
-        
-        int[,] partiesMultidimensional = new int[3, 6]
-        {
-            { 25, 27, 28, 29, 30, 32,},
-            { 25, 27, 28, 29, 30, 32,},
-            { 25, 27, 28, 29, 30, 32,}
-        };
+        list.PrintList();
 
-        foreach (int value in partiesMultidimensional)
-        {
-            Console.WriteLine(value);
-            totalAge++;
-        }
+        //list.Add(new[] { 2, 2, 1, 3, 4, 5, 563, 23, 12, 2 });
 
-
-
-        Console.WriteLine("Total age: " + totalAge);    
     }
-    private static void MainMenu()
-    {
-        
-    }
+       
 }
  
