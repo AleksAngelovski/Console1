@@ -10,6 +10,7 @@ class MainClass
         partiesJagged[2] = new int[] { 25, 27, 28, 29, 30, 32 };
         int totalAge = 0;
 
+        
         foreach (int[] thisRow in partiesJagged)
         {
             foreach(int i in thisRow)
@@ -18,6 +19,22 @@ class MainClass
                 totalAge++;
             }
         }
+        
+        int[,] partiesMultidimensional = new int[3, 6]
+        {
+            { 25, 27, 28, 29, 30, 32,},
+            { 25, 27, 28, 29, 30, 32,},
+            { 25, 27, 28, 29, 30, 32,}
+        };
+
+        foreach (int value in partiesMultidimensional)
+        {
+            Console.WriteLine(value);
+            totalAge++;
+        }
+
+
+
         Console.WriteLine("Total age: " + totalAge);    
     }
     private static void MainMenu()
