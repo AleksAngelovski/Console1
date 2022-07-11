@@ -1,4 +1,5 @@
 using Console1.MeList;
+using FluentAssertions;
 
 namespace Console1.Tests
 {
@@ -17,7 +18,7 @@ namespace Console1.Tests
                 testList.Add(i);
             }
 
-            int currentElementCount = testList.count;
+            int currentElementCount = testList.Count;
             int currentArrayLength = testList.GetInternalArrayLength();
 
             Assert.True(currentElementCount <= currentArrayLength);
@@ -36,10 +37,36 @@ namespace Console1.Tests
                 testList.Add(arrayToAdd);
             }
 
-            int currentElementCount = testList.count;
+            int currentElementCount = testList.Count;
             int currentArrayLength = testList.GetInternalArrayLength();
 
             Assert.True(currentElementCount <= currentArrayLength);
+        }
+
+        [Fact]
+        public void Indexing_OutOfRange_Throws_OutOfRangeException()
+        {
+            MeList<int> testList = new MeList<int>() { 1, 2, 3, 4, 5, 6, 6, 7, 8 };
+            
+            Action result = () => { var res = testList[50]; };
+
+            Assert.Throws<IndexOutOfRangeException>(result);
+        }
+        [Theory]
+        [InlineData(400)]
+        [InlineData(34)]
+        public void TrimExcess_ResetsTheCapacity_To_CorrectValue(int num_items)
+        {
+            MeList<int> testList = new MeList<int>();
+            for(int i = 0; i < num_items; i++)
+            {
+                testList.Add(i);
+            }
+
+            testList.TrimExcess();
+            int currentCapacity = testList.Capacity;
+
+            Assert.True(currentCapacity == num_items);
         }
     }
 }

@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JmlG/mivPTzba0OQtOfkwU3QFdX/ERiMUNaqUpu+ITzUriTixekO56BQetGlTWNvopnQ08UZWrbSB9T7DWXZ1A==",
+  "dgSpecHash": "c2J+e1I9mj9FQWFFEA2EpqnBhEh+5x5syltwbUEJbH9D3cohsfIRMG1B5advkRWZdtCLvralrQWTSdXWSGQlIw==",
   "success": true,
   "projectFilePath": "C:\\Users\\aleks\\source\\repos\\Console1\\Console1\\Console1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\aleks\\.nuget\\packages\\fluentassertions\\6.7.0\\fluentassertions.6.7.0.nupkg.sha512",
+    "C:\\Users\\aleks\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+    "C:\\Users\\aleks\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
+  ],
   "logs": []
 }
